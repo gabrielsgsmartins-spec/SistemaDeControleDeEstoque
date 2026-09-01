@@ -1,0 +1,378 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\repositorio\\iprodutorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:repositorio\\iprodutorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\models\\categoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:models\\categoriamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\views\\produto\\adicionar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:views\\produto\\adicionar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\repositorio\\produtorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:repositorio\\produtorrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\models\\movimentacaoestoquemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:models\\movimentacaoestoquemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\data\\estoquecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:data\\estoquecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\sistemadecontroledeestoque.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:sistemadecontroledeestoque.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\enums\\tipomovimentacaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:enums\\tipomovimentacaoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901182954_InicialEstoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260901182954_InicialEstoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|c:\\users\\gmartins\\desktop\\controledeestoque\\sistemadecontroledeestoque\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F1AE29B-91D7-45D7-B72D-CB0E725E34AB}|SistemaDeControleDeEstoque.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoModel.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\ProdutoModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProdutoModel.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\ProdutoModel.cs",
+              "RelativeToolTip": "Models\\ProdutoModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:06:36.43Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:14:23.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProdutoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Repositorio\\IProdutoRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\IProdutoRepositorio.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Repositorio\\IProdutoRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\IProdutoRepositorio.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:17:12.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T19:48:46.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-01T18:36:46.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:14:50.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Produto\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Produto\\Index.cshtml",
+              "RelativeToolTip": "Views\\Produto\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwEEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-01T18:47:05.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoriaModel.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\CategoriaModel.cs",
+              "RelativeDocumentMoniker": "Models\\CategoriaModel.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\CategoriaModel.cs",
+              "RelativeToolTip": "Models\\CategoriaModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:13:16.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Adicionar.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Produto\\Adicionar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produto\\Adicionar.cshtml",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Produto\\Adicionar.cshtml",
+              "RelativeToolTip": "Views\\Produto\\Adicionar.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-01T18:40:58.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260901195011_RenomearNomeProdutoParaNome.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs",
+              "RelativeToolTip": "Migrations\\20260901195011_RenomearNomeProdutoParaNome.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T19:50:11.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovimentacaoEstoqueModel.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\MovimentacaoEstoqueModel.cs",
+              "RelativeDocumentMoniker": "Models\\MovimentacaoEstoqueModel.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\MovimentacaoEstoqueModel.cs",
+              "RelativeToolTip": "Models\\MovimentacaoEstoqueModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:22:47.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProdutorRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Repositorio\\ProdutorRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\ProdutorRepositorio.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Repositorio\\ProdutorRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\ProdutorRepositorio.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:17:32.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SistemaDeControleDeEstoque",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\SistemaDeControleDeEstoque.csproj",
+              "RelativeDocumentMoniker": "SistemaDeControleDeEstoque.csproj",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\SistemaDeControleDeEstoque.csproj",
+              "RelativeToolTip": "SistemaDeControleDeEstoque.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-01T18:04:11.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:25:18.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EstoqueContext.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Data\\EstoqueContext.cs",
+              "RelativeDocumentMoniker": "Data\\EstoqueContext.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Data\\EstoqueContext.cs",
+              "RelativeToolTip": "Data\\EstoqueContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:20:13.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TipoMovimentacaoEnum.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Enums\\TipoMovimentacaoEnum.cs",
+              "RelativeDocumentMoniker": "Enums\\TipoMovimentacaoEnum.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Enums\\TipoMovimentacaoEnum.cs",
+              "RelativeToolTip": "Enums\\TipoMovimentacaoEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:23:54.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-01T18:49:16.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-01T18:46:20.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20260901182954_InicialEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901182954_InicialEstoque.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260901182954_InicialEstoque.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Migrations\\20260901182954_InicialEstoque.cs",
+              "RelativeToolTip": "Migrations\\20260901182954_InicialEstoque.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:29:54.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-01T18:25:06.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\gmartins\\Desktop\\ControleDeEstoque\\SistemaDeControleDeEstoque\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T18:08:33.625Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

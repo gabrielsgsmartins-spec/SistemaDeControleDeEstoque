@@ -1,0 +1,192 @@
+﻿@model IEnumerable<SistemaEstoque.Models.ProdutoModel>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<div class="produtos-page">
+
+    <!-- CABEÇALHO -->
+    <div class="produtos-header">
+
+        <div>
+            <h1>Produtos</h1>
+
+            <p>
+                Gerencie os produtos cadastrados no estoque.
+            </p>
+        </div>
+
+        <a asp-controller="Produto"
+           asp-action="Adicionar"
+           class="btn-novo">
+            + Novo Produto
+        </a>
+        <br />
+        <br />
+       
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="produtos-toolbar">
+
+        <div class="search-box">
+
+            <input type="text"
+                   id="pesquisaProduto"
+                   placeholder="Pesquisar produto..." />
+
+        </div>
+
+    </div>
+
+
+    <!-- TABELA -->
+    <div class="table-container">
+
+        <table id="tabelaProdutos">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID </th>
+
+
+                    <th>Produto</th>
+
+                    <th>Categoria</th>
+
+                    <th>Estoque</th>
+
+                    <th>Preço</th>
+
+                    <th>Status</th>
+
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var produto in Model)
+                    {
+                        <tr>
+
+                            <!-- ID -->
+                            <td>
+                                @produto.Id
+                            </td>
+
+
+                            <!-- PRODUTO -->
+                            <td>
+                                @produto.Nome
+                            </td>
+
+
+                            <!-- CATEGORIA -->
+                            <td>
+                                @(produto.Categoria?.Nome ?? "Sem categoria")
+                            </td>
+
+
+                            <!-- ESTOQUE -->
+                            <td>
+                                @produto.QuantidadeEmEstoque
+                            </td>
+
+
+                            <!-- PREÇO -->
+                            <td>
+                                R$ @produto.PrecoUnitario.ToString("N2")
+                            </td>
+
+
+                            <!-- STATUS -->
+                            <td>
+
+                                @if (produto.QuantidadeEmEstoque <= produto.QuantidadeMinima)
+                                {
+                                    <span class="status status-baixo">
+                                        Estoque baixo
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="status status-normal">
+                                        Normal
+                                    </span>
+                                }
+
+                            </td>
+
+
+                            <!-- AÇÕES -->
+                            <td>
+
+                                <div class="acoes">
+
+                                    <a asp-controller="Produto"
+                                       asp-action="Editar"
+                                       asp-route-id="@produto.Id"
+                                       class="btn-editar">
+                                        Editar
+                                    </a>
+
+
+                                    <a asp-controller="Produto"
+                                       asp-action="Apagar"
+                                       asp-route-id="@produto.Id"
+                                       class="btn-excluir">
+                                        Excluir
+                                    </a>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+
+                        <td colspan="7">
+
+                            <div class="sem-produtos">
+
+                                <h2>Nenhum produto encontrado</h2>
+
+                                <p>
+                                    Cadastre seu primeiro produto para começar.
+                                </p>
+
+                                <a asp-controller="Produto"
+                                   asp-action="Adicionar"
+                                   class="btn-novo">
+                                    Novo Produto
+                                </a>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
