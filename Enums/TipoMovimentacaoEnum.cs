@@ -3,6 +3,7 @@
     public enum TipoMovimentacaoEnum
     {
         Entrada = 1,
-        Saida = 2
+        Venda = 2,
+        Perda = 3
     }
 }

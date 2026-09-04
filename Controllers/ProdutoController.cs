@@ -56,61 +56,61 @@ namespace SistemaDeControleDeEstoque.Controllers
         }
 
         [HttpPost]
+        [HttpPost]
         public IActionResult Adicionar(ProdutoModel produto, string nomeCategoria)
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    var nome = nomeCategoria.Trim();
-                    if (string.IsNullOrEmpty(nomeCategoria))
-                    {
-                        ModelState.AddModelError(
-                            "Categoria.Nome",
-                            "Digite uma categoria."
-                        );
-
-                        return View(produto);
-                    }
-
-                    var categoriaExistente = _bancoContext.Categorias
-                        .FirstOrDefault(c =>
-                            c.Nome.ToLower() == nomeCategoria.ToLower());
-
-                    if (categoriaExistente == null)
-                    {
-                        var novaCategoria = new CategoriaModel
-                        {
-                            Nome = nomeCategoria
-                        };
-
-                        _bancoContext.Categorias.Add(novaCategoria);
-                        _bancoContext.SaveChanges();
-
-                        produto.CategoriaId = novaCategoria.Id;
-                    }
-                    else
-                    {
-                        produto.CategoriaId = categoriaExistente.Id;
-                    }
-
-                    _bancoContext.Produtos.Add(produto);
-                    _bancoContext.SaveChanges();
-
-                    TempData["MensagemSucesso"] =
-                        "Sucesso, novo produto cadastrado!";
-
-                    return RedirectToAction("Index");
+                    return View(produto);
                 }
 
-                return View(produto);
+                if (string.IsNullOrWhiteSpace(nomeCategoria))
+                {
+                    ModelState.AddModelError(
+                        "nomeCategoria",
+                        "Informe uma categoria."
+                    );
+
+                    return View(produto);
+                }
+
+                string nome = nomeCategoria.Trim();
+
+                // Procura a categoria
+                var categoria = _bancoContext.Categorias
+                    .FirstOrDefault(c => c.Nome.ToLower() == nome.ToLower());
+
+                // Se não existir, cria
+                if (categoria == null)
+                {
+                    categoria = new CategoriaModel
+                    {
+                        Nome = nome
+                    };
+
+                    _bancoContext.Categorias.Add(categoria);
+                    _bancoContext.SaveChanges();
+                }
+
+                // RELACIONA O PRODUTO COM A CATEGORIA
+                produto.CategoriaId = categoria.Id;
+
+                // Salva o produto
+                _bancoContext.Produtos.Add(produto);
+                _bancoContext.SaveChanges();
+
+                TempData["MensagemSucesso"] = "Produto cadastrado com sucesso!";
+
+                return RedirectToAction("Index");
             }
             catch (Exception erro)
             {
                 TempData["MensagemErro"] =
                     $"Erro ao cadastrar: {erro.InnerException?.Message ?? erro.Message}";
 
-                return RedirectToAction("Index");
+                return View(produto);
             }
         }
 

@@ -1,5 +1,4 @@
-﻿
-@model SistemaEstoque.Models.ProdutoModel
+﻿@model SistemaEstoque.Models.ProdutoModel
 
 @{
     ViewData["Title"] = "Novo Produto";
@@ -8,6 +7,7 @@
 <div class="produto-form-page">
 
     <div class="produto-form-header">
+
         <div>
             <h1>Novo Produto</h1>
             <p>Cadastre um novo produto no estoque.</p>
@@ -18,6 +18,7 @@
            asp-action="Index">
             Voltar
         </a>
+
     </div>
 
     <div class="produto-form-card">
@@ -27,12 +28,14 @@
               method="post">
 
             <div asp-validation-summary="ModelOnly"
-                 class="validation"></div>
+                 class="validation">
+            </div>
 
             <div class="form-grid">
 
                 <!-- NOME -->
                 <div class="form-group">
+
                     <label asp-for="Nome">
                         Nome do produto
                     </label>
@@ -42,22 +45,35 @@
                            placeholder="Digite o nome do produto" />
 
                     <span asp-validation-for="Nome"
-                          class="validation"></span>
+                          class="validation">
+                    </span>
+
                 </div>
 
-                <!-- CATEGORIA -->
-                <input name="nomeCategoria"
-                       class="form-control"
-                       type="text"
-                       placeholder="Ex: Eletrônicos, Alimentos, Limpeza..." />
 
-                <span class="validation">
-                    @Html.ValidationMessage("nomeCategoria")
-                </span>
+                <!-- CATEGORIA -->
+                <div class="form-group">
+
+                    <label for="nomeCategoria">
+                        Categoria
+                    </label>
+
+                    <input name="nomeCategoria"
+                           id="nomeCategoria"
+                           class="form-control"
+                           type="text"
+                           placeholder="Ex: Eletrônicos, Alimentos, Limpeza..." />
+
+                    <span class="validation">
+                        @Html.ValidationMessage("nomeCategoria")
+                    </span>
+
+                </div>
 
 
                 <!-- DESCRIÇÃO -->
                 <div class="form-group form-full">
+
                     <label asp-for="Descricao">
                         Descrição
                     </label>
@@ -65,15 +81,19 @@
                     <textarea asp-for="Descricao"
                               class="form-control"
                               rows="4"
-                              placeholder="Digite uma descrição do produto"></textarea>
+                              placeholder="Digite uma descrição do produto">
+                    </textarea>
 
                     <span asp-validation-for="Descricao"
-                          class="validation"></span>
+                          class="validation">
+                    </span>
+
                 </div>
 
 
                 <!-- QUANTIDADE EM ESTOQUE -->
                 <div class="form-group">
+
                     <label asp-for="QuantidadeEmEstoque">
                         Quantidade em estoque
                     </label>
@@ -85,12 +105,15 @@
                            placeholder="0" />
 
                     <span asp-validation-for="QuantidadeEmEstoque"
-                          class="validation"></span>
+                          class="validation">
+                    </span>
+
                 </div>
 
 
                 <!-- QUANTIDADE MÍNIMA -->
                 <div class="form-group">
+
                     <label asp-for="QuantidadeMinima">
                         Quantidade mínima
                     </label>
@@ -102,12 +125,15 @@
                            placeholder="5" />
 
                     <span asp-validation-for="QuantidadeMinima"
-                          class="validation"></span>
+                          class="validation">
+                    </span>
+
                 </div>
 
 
                 <!-- PREÇO -->
                 <div class="form-group">
+
                     <label asp-for="PrecoUnitario">
                         Preço unitário
                     </label>
@@ -120,7 +146,9 @@
                            placeholder="0,00" />
 
                     <span asp-validation-for="PrecoUnitario"
-                          class="validation"></span>
+                          class="validation">
+                    </span>
+
                 </div>
 
             </div>
@@ -147,3 +175,9 @@
     </div>
 
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
