@@ -47,5 +47,6 @@ namespace SistemaEstoque.Repositorio
             _bancoContext.Produtos.Remove(produto);
             _bancoContext.SaveChanges();
         }
+
     }
 }

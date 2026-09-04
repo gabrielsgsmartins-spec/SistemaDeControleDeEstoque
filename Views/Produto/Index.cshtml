@@ -4,6 +4,7 @@
     ViewData["Title"] = "Produtos";
 }
 
+
 <div class="produtos-page">
 
     <!-- CABEÇALHO -->
@@ -94,7 +95,7 @@
 
                             <!-- CATEGORIA -->
                             <td>
-                                @(produto.Categoria?.Nome ?? "Sem categoria")
+                                @(produto.Categoria == null ? "Sem categoria" : produto.Categoria.Nome)
                             </td>
 
 
@@ -143,12 +144,12 @@
 
 
                                     <a asp-controller="Produto"
-                                       asp-action="Apagar"
+                                       asp-action="Excluir"
                                        asp-route-id="@produto.Id"
-                                       class="btn-excluir">
+                                       class="btn-excluir"
+                                       onclick="return confirm('Tem certeza que deseja excluir o produto @produto.Nome?');">
                                         Excluir
                                     </a>
-
                                 </div>
 
                             </td>

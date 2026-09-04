@@ -1,8 +1,7 @@
-﻿
-@model SistemaEstoque.Models.ProdutoModel
+﻿@model SistemaEstoque.Models.ProdutoModel
 
 @{
-    ViewData["Title"] = "Novo Produto";
+    ViewData["Title"] = "Editar Produto";
 }
 
 <div class="produto-form-page">
@@ -39,21 +38,26 @@
 
                     <input asp-for="Nome"
                            class="form-control"
-                           placeholder="Digite o nome do produto" />
+                           placeholder="@Model.Nome" />
 
                     <span asp-validation-for="Nome"
                           class="validation"></span>
                 </div>
 
                 <!-- CATEGORIA -->
-                <input name="nomeCategoria"
-                       class="form-control"
-                       type="text"
-                       placeholder="Ex: Eletrônicos, Alimentos, Limpeza..." />
+                <div class="form-group">
+                    <label asp-for="Categoria">
+                        Categoria
+                    </label>
 
-                <span class="validation">
-                    @Html.ValidationMessage("nomeCategoria")
-                </span>
+                    <input asp-for="Categoria"
+                           class="form-control"
+                           type="text"
+                           placeholder="@Model.Categoria" />
+
+                    <span asp-validation-for="Categoria"
+                          class="validation"></span>
+                </div>
 
 
                 <!-- DESCRIÇÃO -->
@@ -65,7 +69,7 @@
                     <textarea asp-for="Descricao"
                               class="form-control"
                               rows="4"
-                              placeholder="Digite uma descrição do produto"></textarea>
+                              placeholder="@Model.Descricao"></textarea>
 
                     <span asp-validation-for="Descricao"
                           class="validation"></span>
@@ -82,7 +86,7 @@
                            class="form-control"
                            type="number"
                            min="0"
-                           placeholder="0" />
+                           placeholder="@Model.QuantidadeEmEstoque" />
 
                     <span asp-validation-for="QuantidadeEmEstoque"
                           class="validation"></span>
@@ -99,7 +103,7 @@
                            class="form-control"
                            type="number"
                            min="0"
-                           placeholder="5" />
+                           placeholder="@Model.QuantidadeMinima" />
 
                     <span asp-validation-for="QuantidadeMinima"
                           class="validation"></span>
@@ -117,7 +121,7 @@
                            type="number"
                            step="0.01"
                            min="0"
-                           placeholder="0,00" />
+                           placeholder="@Model.PrecoUnitario" />
 
                     <span asp-validation-for="PrecoUnitario"
                           class="validation"></span>
@@ -136,8 +140,8 @@
                 </a>
 
                 <button type="submit"
-                        class="btn btn-primary btn-block">
-                    Adicionar
+                        class="btn btn-primary btn-block" asp-controller="Produto" asp-action="Index">
+                    Editar
                 </button>
 
             </div>
@@ -147,3 +151,4 @@
     </div>
 
 </div>
+

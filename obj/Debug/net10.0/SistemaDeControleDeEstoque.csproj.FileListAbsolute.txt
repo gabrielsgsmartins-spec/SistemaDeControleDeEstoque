@@ -229,4 +229,5 @@ C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug
 C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\SistemaDeControleDeEstoque.pdb
 C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\SistemaDeControleDeEstoque.genruntimeconfig.cache
 C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\ref\SistemaDeControleDeEstoque.dll
-C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\compressed\wza6fbltne-{0}-2dejbv68v2-2dejbv68v2.gz
+C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\SistemaDeControleDeEstoque.sourcelink.json
+C:\Users\gmartins\Desktop\ControleDeEstoque\SistemaDeControleDeEstoque\obj\Debug\net10.0\compressed\wza6fbltne-{0}-dvvx63dguy-dvvx63dguy.gz

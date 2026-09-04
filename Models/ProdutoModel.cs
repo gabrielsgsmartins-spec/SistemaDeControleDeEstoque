@@ -21,8 +21,9 @@ namespace SistemaEstoque.Models
 
         public DateTime DataCadastro { get; set; } = DateTime.Now;
 
-        // Chave estrangeira
+        // Categoria
         public int CategoriaId { get; set; }
+
         public CategoriaModel? Categoria { get; set; }
     }
 }

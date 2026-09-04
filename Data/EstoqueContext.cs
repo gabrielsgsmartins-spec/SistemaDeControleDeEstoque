@@ -8,9 +8,9 @@ namespace SistemaEstoque.Data
         public EstoqueContext(DbContextOptions<EstoqueContext> options) : base(options)
         {
         }
-
+        public DbSet<MovimentacaoEstoqueModel> Movimentacoes { get; set; }
         public DbSet<ProdutoModel> Produtos { get; set; }
         public DbSet<CategoriaModel> Categorias { get; set; }
-        public DbSet<MovimentacaoEstoqueModel> Movimentacoes { get; set; }
+        public DbSet<MovimentacaoEstoqueModel> MovimentacaoEstoqueModel { get; set; }
     }
 }

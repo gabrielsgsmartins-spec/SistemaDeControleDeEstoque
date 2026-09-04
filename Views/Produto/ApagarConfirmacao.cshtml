@@ -1,0 +1,45 @@
+﻿@model SistemaEstoque.Models.ProdutoModel
+
+@{
+    ViewData["Title"] = "Confirmacao de exclusao do produto";
+}
+
+
+<div class="confirmacao">
+
+    <h1>Excluir Produto</h1>
+
+    <p>
+        Tem certeza que deseja excluir este produto?
+    </p>
+
+    <h3>@Model.Nome</h3>
+
+    <p>
+        Estoque: @Model.QuantidadeEmEstoque
+    </p>
+
+    <div>
+        <a asp-controller="Produto"
+           asp-action="Index"
+           class="btn-cancelar">
+            Cancelar
+        </a>
+
+        <form asp-controller="Produto"
+              asp-action="Excluir"
+              method="post">
+
+            <input type="hidden"
+                   name="id"
+                   value="@Model.Id" />
+
+            <button type="submit"
+                    class="btn-excluir">
+                Excluir
+            </button>
+
+        </form>
+    </div>
+
+</div>

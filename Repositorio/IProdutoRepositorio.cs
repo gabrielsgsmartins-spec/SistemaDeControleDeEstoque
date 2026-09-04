@@ -1,6 +1,7 @@
-﻿using SistemaEstoque.Data;
-using SistemaEstoque.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SistemaEstoque.Data;
+using SistemaEstoque.Models;
 
 namespace SistemaEstoque.Repositorio
 {
@@ -11,5 +12,6 @@ namespace SistemaEstoque.Repositorio
         void Adicionar(ProdutoModel produto);
         void Editar(ProdutoModel produto);
         void Excluir(int id);
+
     }
 }

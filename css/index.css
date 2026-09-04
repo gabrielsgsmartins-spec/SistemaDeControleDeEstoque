@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    PÁGINA DE PRODUTOS - INDEX.CSS
    ========================================================================== */
 
@@ -107,7 +107,7 @@
 /* --- CONTAINER DA TABELA --- */
 .table-container {
     background-color: #ffffff;
-    border: 1px solid #d1d5db;
+    border: 1px solid #e5e7eb;
     border-radius: 12px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -119,24 +119,24 @@
     text-align: left;
 }
 
-    /* Cabeçalho da Tabela - Títulos em Preto Puro e em Negrito */
+    /* Cabeçalho da Tabela */
     #tabelaProdutos thead {
-        background-color: #f3f4f6;
-        border-bottom: 2px solid #d1d5db;
+        background-color: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
     }
 
     #tabelaProdutos th {
         padding: 14px 20px;
         font-size: 0.75rem;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: #000000; /* Preto puro */
+        color: #4b5563;
     }
 
     /* Linhas do Corpo */
     #tabelaProdutos tbody tr {
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid #f3f4f6;
         transition: background-color 0.15s ease;
     }
 
@@ -145,15 +145,13 @@
         }
 
         #tabelaProdutos tbody tr:hover {
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
         }
 
-    /* Dados da Tabela - Escrita bem escura */
     #tabelaProdutos td {
         padding: 16px 20px;
         font-size: 0.875rem;
-        font-weight: 500;
-        color: #111827; /* Preto de altíssimo contraste */
+        color: #374151;
         vertical-align: middle;
     }
 
@@ -203,8 +201,8 @@
 }
 
     .btn-editar:hover {
-        background-color: blue;
-        color: white !important;
+        background-color: #2563eb;
+        color: #111827;
     }
 
 .btn-excluir {
@@ -213,10 +211,10 @@
     border: 1px solid #ffe3e3;
 }
 
-    .btn-excluir:hover {
-        color: white !important;
-        background-color: red;
-    }
+.btn-excluir:hover {
+    color: white !important;
+    background-color: red;
+}
 
 /* --- ESTADO VAZIO (SEM PRODUTOS) --- */
 .sem-produtos {

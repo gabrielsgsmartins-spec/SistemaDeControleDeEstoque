@@ -1,12 +1,15 @@
-﻿using SistemaEstoque.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class CategoriaModel
+namespace SistemaEstoque.Models
 {
-    public int Id { get; set; }
+    public class CategoriaModel
+    {
+        public int Id { get; set; }
 
-    [Required]
-    public string Nome { get; set; }
+        [Required]
+        public string Nome { get; set; }
 
-    public List<ProdutoModel>? Produtos { get; set; }
+        public List<ProdutoModel> Produtos { get; set; }
+            = new List<ProdutoModel>();
+    }
 }
