@@ -4,10 +4,8 @@
     ViewData["Title"] = "Produtos";
 }
 
-
 <div class="produtos-page">
 
-    <!-- CABEÇALHO -->
     <div class="produtos-header">
 
         <div>
@@ -23,14 +21,12 @@
            class="btn-novo">
             + Novo Produto
         </a>
+
         <br />
         <br />
-       
 
     </div>
 
-
-    <!-- PESQUISA -->
     <div class="produtos-toolbar">
 
         <div class="search-box">
@@ -43,8 +39,6 @@
 
     </div>
 
-
-    <!-- TABELA -->
     <div class="table-container">
 
         <table id="tabelaProdutos">
@@ -53,8 +47,7 @@
 
                 <tr>
 
-                    <th>ID </th>
-
+                    <th>ID</th>
 
                     <th>Produto</th>
 
@@ -72,7 +65,6 @@
 
             </thead>
 
-
             <tbody>
 
                 @if (Model != null && Model.Any())
@@ -81,40 +73,37 @@
                     {
                         <tr>
 
-                            <!-- ID -->
                             <td>
                                 @produto.Id
                             </td>
 
-
-                            <!-- PRODUTO -->
                             <td>
                                 @produto.Nome
                             </td>
 
-
-                            <!-- CATEGORIA -->
                             <td>
-                                @(produto.Categoria == null ? "Sem categoria" : produto.Categoria.Nome)
+                                @(produto.Categoria == null
+                                    ? "Sem categoria"
+                                    : produto.Categoria.Nome)
                             </td>
 
-
-                            <!-- ESTOQUE -->
                             <td>
                                 @produto.QuantidadeEmEstoque
                             </td>
 
-
-                            <!-- PREÇO -->
                             <td>
                                 R$ @produto.PrecoUnitario.ToString("N2")
                             </td>
 
-
-                            <!-- STATUS -->
                             <td>
 
-                                @if (produto.QuantidadeEmEstoque <= produto.QuantidadeMinima)
+                                @if (produto.QuantidadeEmEstoque <= 0)
+                                {
+                                    <span class="status status-baixo">
+                                        Estoque Esgotado
+                                    </span>
+                                }
+                                else if (produto.QuantidadeEmEstoque <= produto.QuantidadeMinima)
                                 {
                                     <span class="status status-baixo">
                                         Estoque baixo
@@ -123,14 +112,12 @@
                                 else
                                 {
                                     <span class="status status-normal">
-                                        Normal
+                                        Estoque Normal
                                     </span>
                                 }
 
                             </td>
 
-
-                            <!-- AÇÕES -->
                             <td>
 
                                 <div class="acoes">
@@ -142,14 +129,14 @@
                                         Editar
                                     </a>
 
-
                                     <a asp-controller="Produto"
-                                       asp-action="Excluir"
+                                       asp-action="ApagarConfirmacao"
                                        asp-route-id="@produto.Id"
                                        class="btn-excluir"
                                        onclick="return confirm('Tem certeza que deseja excluir o produto @produto.Nome?');">
                                         Excluir
                                     </a>
+
                                 </div>
 
                             </td>

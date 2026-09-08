@@ -6,8 +6,8 @@ namespace SistemaEstoque.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        public string Nome { get; set; }
+        [Required(ErrorMessage = "Informe o nome do produto")]
+        public string Nome { get; set; } = string.Empty;
 
         public string? Descricao { get; set; }
 
@@ -21,7 +21,8 @@ namespace SistemaEstoque.Models
 
         public DateTime DataCadastro { get; set; } = DateTime.Now;
 
-        // Categoria
+       
+        [Range(1, int.MaxValue, ErrorMessage = "Selecione uma categoria.")]
         public int CategoriaId { get; set; }
 
         public CategoriaModel? Categoria { get; set; }

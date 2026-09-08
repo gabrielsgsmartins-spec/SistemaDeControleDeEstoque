@@ -33,7 +33,6 @@
 
             <div class="form-grid">
 
-                <!-- NOME -->
                 <div class="form-group">
 
                     <label asp-for="Nome">
@@ -51,27 +50,65 @@
                 </div>
 
 
-                <!-- CATEGORIA -->
                 <div class="form-group">
 
-                    <label for="nomeCategoria">
+                    <label for="CategoriaId">
                         Categoria
                     </label>
 
-                    <input name="nomeCategoria"
-                           id="nomeCategoria"
-                           class="form-control"
-                           type="text"
-                           placeholder="Ex: Eletrônicos, Alimentos, Limpeza..." />
+                    <div style="display: flex; gap: 8px;">
 
-                    <span class="validation">
-                        @Html.ValidationMessage("nomeCategoria")
+                        <select asp-for="CategoriaId"
+                                class="form-control">
+
+                            <option value="0">
+                                Selecione uma categoria...
+                            </option>
+
+                            @foreach (var categoria in ViewBag.Categorias)
+                            {
+                                <option value="@categoria.Id">
+                                    @categoria.Nome
+                                </option>
+                            }
+
+                        </select>
+
+                        <button type="button"
+                                class="btn btn-secondary"
+                                onclick="mostrarNovaCategoria()">
+                            + Adicionar categoria
+                        </button>
+
+                    </div>
+
+                    <div id="novaCategoriaDiv"
+                         style="display: none; margin-top: 10px;">
+
+                        <div style="display: flex; gap: 8px;">
+
+                            <input type="text"
+                                   id="nomeCategoria"
+                                   class="form-control"
+                                   placeholder="Nome da nova categoria" />
+
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    onclick="adicionarCategoria()">
+                                Adicionar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <span asp-validation-for="CategoriaId"
+                          class="validation">
                     </span>
 
                 </div>
 
 
-                <!-- DESCRIÇÃO -->
                 <div class="form-group form-full">
 
                     <label asp-for="Descricao">
@@ -81,8 +118,7 @@
                     <textarea asp-for="Descricao"
                               class="form-control"
                               rows="4"
-                              placeholder="Digite uma descrição do produto">
-                    </textarea>
+                              placeholder="Digite uma descrição do produto"></textarea>
 
                     <span asp-validation-for="Descricao"
                           class="validation">
@@ -91,7 +127,6 @@
                 </div>
 
 
-                <!-- QUANTIDADE EM ESTOQUE -->
                 <div class="form-group">
 
                     <label asp-for="QuantidadeEmEstoque">
@@ -111,7 +146,6 @@
                 </div>
 
 
-                <!-- QUANTIDADE MÍNIMA -->
                 <div class="form-group">
 
                     <label asp-for="QuantidadeMinima">
@@ -131,7 +165,6 @@
                 </div>
 
 
-                <!-- PREÇO -->
                 <div class="form-group">
 
                     <label asp-for="PrecoUnitario">
@@ -154,7 +187,6 @@
             </div>
 
 
-            <!-- BOTÕES -->
             <div class="form-actions">
 
                 <a class="btn btn-secondary btn-block"
@@ -176,8 +208,45 @@
 
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+<script>
+
+    function mostrarNovaCategoria() {
+
+        const div = document.getElementById("novaCategoriaDiv");
+
+        if (div.style.display === "none") {
+            div.style.display = "block";
+        }
+        else {
+            div.style.display = "none";
+        }
     }
-}
+
+    function adicionarCategoria() {
+
+        const nome = document.getElementById("nomeCategoria").value;
+
+        if (nome.trim() === "") {
+            alert("Digite o nome da categoria.");
+            return;
+        }
+
+        const form = document.createElement("form");
+
+        form.method = "POST";
+        form.action = "/Categoria/Adicionar";
+
+        const input = document.createElement("input");
+
+        input.type = "hidden";
+        input.name = "nomeCategoria";
+        input.value = nome;
+
+        form.appendChild(input);
+
+        document.body.appendChild(form);
+
+        form.submit();
+    }
+
+</script>

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Nota da Movimentação";
+}
+
+<div style="max-width: 600px; margin: 40px auto;">
+
+    <div class="produto-form-card">
+
+        <div style="text-align: center; margin-bottom: 25px;">
+
+            <h1>SISTEMA DE ESTOQUE</h1>
+
+            <h3>MOVIMENTAÇÃO</h3>
+
+        </div>
+
+
+        <table class="table table-bordered">
+
+            <tbody>
+
+                <tr>
+                    <th>Tipo</th>
+                    <td>@TempData["TipoMovimentacao"]</td>
+                </tr>
+
+                <tr>
+                    <th>Produto</th>
+                    <td>@TempData["Produto"]</td>
+                </tr>
+
+                <tr>
+                    <th>Quantidade</th>
+                    <td>@TempData["Quantidade"]</td>
+                </tr>
+
+                <tr>
+                    <th>Data</th>
+                    <td>@TempData["Data"]</td>
+                </tr>
+
+                @if (TempData["TipoMovimentacao"]?.ToString() == "Perda")
+                {
+                    <tr>
+                        <th>Motivo</th>
+                        <td>@TempData["Motivo"]</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+
+        <table class="table table-bordered">
+
+            <tbody>
+
+                <tr>
+                    <th>Estoque antes</th>
+                    <td>@TempData["EstoqueAntes"]</td>
+                </tr>
+
+                <tr>
+                    <th>Estoque depois</th>
+                    <td>@TempData["EstoqueDepois"]</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <div class="form-actions">
+
+            <a class="btn btn-secondary btn-block"
+               asp-controller="Produto"
+               asp-action="Index">
+                Voltar aos produtos
+            </a>
+
+            <a class="btn btn-primary btn-block"
+               asp-controller="Movimentacao"
+               asp-action="Index">
+                Nova movimentação
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

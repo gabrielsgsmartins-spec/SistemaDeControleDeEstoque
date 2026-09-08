@@ -1,0 +1,14 @@
+﻿.status-entrada {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-venda {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-perda {
+    background-color: #fee2e2;
+    color: #991b1b;
+}

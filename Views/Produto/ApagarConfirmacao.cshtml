@@ -1,9 +1,8 @@
 ﻿@model SistemaEstoque.Models.ProdutoModel
 
 @{
-    ViewData["Title"] = "Confirmacao de exclusao do produto";
+    ViewData["Title"] = "Excluir Produto";
 }
-
 
 <div class="confirmacao">
 
@@ -13,13 +12,19 @@
         Tem certeza que deseja excluir este produto?
     </p>
 
-    <h3>@Model.Nome</h3>
+    <div class="produto-info">
 
-    <p>
-        Estoque: @Model.QuantidadeEmEstoque
-    </p>
+        <h3>@Model.Nome</h3>
 
-    <div>
+        <p>
+            <strong>Estoque atual:</strong>
+            @Model.QuantidadeEmEstoque
+        </p>
+
+    </div>
+
+    <div class="confirmacao-acoes">
+
         <a asp-controller="Produto"
            asp-action="Index"
            class="btn-cancelar">
@@ -36,10 +41,11 @@
 
             <button type="submit"
                     class="btn-excluir">
-                Excluir
+                Excluir produto
             </button>
 
         </form>
+
     </div>
 
 </div>

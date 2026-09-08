@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Movimentações";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/MovimentcaoIndex.css" />
+}
+<div class="produto-form-page">
+
+    <div class="produto-form-header">
+
+        <div>
+            <h1>Movimentações</h1>
+            <p>Histórico de todas as movimentações do estoque.</p>
+        </div>
+
+        <a class="btn btn-primary btn-block"
+           asp-controller="Movimentacao"
+           asp-action="Gerar">
+            + Gerar movimentação
+        </a>
+
+    </div>
+
+    <div class="produto-form-card">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @if (ViewBag.Movimentacoes.Count == 0)
+                {
+                    <tr>
+                        <td colspan="4">
+                            Nenhuma movimentação registrada.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var movimentacao in ViewBag.Movimentacoes)
+                    {
+                        <tr>
+
+                            <td>
+                                @if (movimentacao.Tipo == "Entrada")
+                                {
+                                    <span class="status status-entrada">
+                                        Entrada
+                                    </span>
+                                }
+                                else if (movimentacao.Tipo == "Venda")
+                                {
+                                    <span class="status status-venda">
+                                        Venda
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="status status-perda">
+                                        Perda
+                                    </span>
+                                }
+                            </td>
+
+                            <td>
+                                @movimentacao.Produto
+                            </td>
+
+                            <td>
+                                @movimentacao.Quantidade
+                            </td>
+
+                            <td>
+                                @movimentacao.Data.ToString("dd/MM/yyyy HH:mm") 
+                            </td>
+
+                        </tr>
+                    }
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

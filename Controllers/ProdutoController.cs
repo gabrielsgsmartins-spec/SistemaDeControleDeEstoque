@@ -17,16 +17,24 @@ namespace SistemaDeControleDeEstoque.Controllers
 
         public IActionResult Index()
         {
-            var produtos = _bancoContext.Produtos.ToList();
+            var produtos = _bancoContext.Produtos
+                .Include(p => p.Categoria)
+                .ToList();
 
             return View(produtos);
         }
+        [HttpGet]
         public IActionResult Adicionar()
         {
+            ViewBag.Categorias = _bancoContext.Categorias
+                .OrderBy(c => c.Nome)
+                .ToList();
+
             return View();
+            // passando as categoria que ja existemk no banco
+
 
         }
-
         [HttpGet]
         public IActionResult Editar(int id)
         {
@@ -38,8 +46,14 @@ namespace SistemaDeControleDeEstoque.Controllers
                 return NotFound();
             }
 
+            ViewBag.Categorias = _bancoContext.Categorias
+                .OrderBy(c => c.Nome)
+                .ToList();
+
             return View(produto);
         }
+
+
 
         [HttpGet]
         public IActionResult ApagarConfirmacao(int id)
@@ -54,50 +68,58 @@ namespace SistemaDeControleDeEstoque.Controllers
 
             return View("ApagarConfirmacao", produto);
         }
+        public IActionResult BuscarProduto(int id)
+        {
+            var produto = _bancoContext.Produtos
+               .FirstOrDefault(p => p.Id == id);
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return View(produto);
+
+        }
+
 
         [HttpPost]
-        [HttpPost]
-        public IActionResult Adicionar(ProdutoModel produto, string nomeCategoria)
+        public IActionResult Adicionar(ProdutoModel produto, string? novaCategoria)
         {
             try
             {
+                if (produto.CategoriaId == -1)
+                {
+                    if (string.IsNullOrWhiteSpace(novaCategoria))
+                    {
+                        ModelState.AddModelError(
+                            "CategoriaId",
+                            "Digite o nome da nova categoria."
+                        );
+                    }
+                    else
+                    {
+                        var categoria = new CategoriaModel
+                        {
+                            Nome = novaCategoria.Trim()
+                        };
+
+
+                        _bancoContext.Categorias.Add(categoria);
+                        _bancoContext.SaveChanges();
+
+                        produto.CategoriaId = categoria.Id;
+                    }
+                }
+
                 if (!ModelState.IsValid)
                 {
-                    return View(produto);
-                }
-
-                if (string.IsNullOrWhiteSpace(nomeCategoria))
-                {
-                    ModelState.AddModelError(
-                        "nomeCategoria",
-                        "Informe uma categoria."
-                    );
+                    ViewBag.Categorias = _bancoContext.Categorias
+                        .OrderBy(c => c.Nome)
+                        .ToList();
 
                     return View(produto);
                 }
 
-                string nome = nomeCategoria.Trim();
-
-                // Procura a categoria
-                var categoria = _bancoContext.Categorias
-                    .FirstOrDefault(c => c.Nome.ToLower() == nome.ToLower());
-
-                // Se não existir, cria
-                if (categoria == null)
-                {
-                    categoria = new CategoriaModel
-                    {
-                        Nome = nome
-                    };
-
-                    _bancoContext.Categorias.Add(categoria);
-                    _bancoContext.SaveChanges();
-                }
-
-                // RELACIONA O PRODUTO COM A CATEGORIA
-                produto.CategoriaId = categoria.Id;
-
-                // Salva o produto
                 _bancoContext.Produtos.Add(produto);
                 _bancoContext.SaveChanges();
 
@@ -110,10 +132,46 @@ namespace SistemaDeControleDeEstoque.Controllers
                 TempData["MensagemErro"] =
                     $"Erro ao cadastrar: {erro.InnerException?.Message ?? erro.Message}";
 
+                ViewBag.Categorias = _bancoContext.Categorias
+                    .OrderBy(c => c.Nome)
+                    .ToList();
+
                 return View(produto);
             }
         }
+        [HttpPost]
+        public IActionResult AdicionarCategoria(string nomeCategoria)
+        {
+            if (string.IsNullOrWhiteSpace(nomeCategoria))
+            {
+                TempData["MensagemErro"] = "Digite o nome da categoria.";
+                return RedirectToAction("Adicionar");
+            }
 
+            nomeCategoria = nomeCategoria.Trim();
+
+            var categoriaExistente = _bancoContext.Categorias
+                .FirstOrDefault(c => c.Nome.ToLower() == nomeCategoria.ToLower());
+
+            if (categoriaExistente != null)
+            {
+                TempData["MensagemErro"] = "Essa categoria já existe.";
+                return RedirectToAction("Adicionar");
+            }
+
+            var categoria = new CategoriaModel
+            {
+                Nome = nomeCategoria
+            };
+
+            _bancoContext.Categorias.Add(categoria);
+            _bancoContext.SaveChanges();
+
+            TempData["MensagemSucesso"] =
+                "Categoria adicionada com sucesso!";
+
+            return RedirectToAction("Adicionar");
+        }
         [HttpPost]
         public IActionResult Editar(ProdutoModel produto)
         {
@@ -121,9 +179,12 @@ namespace SistemaDeControleDeEstoque.Controllers
             {
                 if (!ModelState.IsValid)
                 {
+                    ViewBag.Categorias = _bancoContext.Categorias
+                        .OrderBy(c => c.Nome)
+                        .ToList();
+
                     return View(produto);
                 }
-
 
                 var produtoBanco = _bancoContext.Produtos
                     .FirstOrDefault(p => p.Id == produto.Id);
@@ -140,7 +201,6 @@ namespace SistemaDeControleDeEstoque.Controllers
                 produtoBanco.PrecoUnitario = produto.PrecoUnitario;
                 produtoBanco.CategoriaId = produto.CategoriaId;
 
-                _bancoContext.Produtos.Update(produtoBanco);
                 _bancoContext.SaveChanges();
 
                 TempData["MensagemSucesso"] = "Produto editado com sucesso!";
@@ -152,9 +212,14 @@ namespace SistemaDeControleDeEstoque.Controllers
                 TempData["MensagemErro"] =
                     $"Erro ao editar: {erro.InnerException?.Message ?? erro.Message}";
 
-                return RedirectToAction("Index");
+                ViewBag.Categorias = _bancoContext.Categorias
+                    .OrderBy(c => c.Nome)
+                    .ToList();
+
+                return View(produto);
             }
         }
+        [HttpPost]
         public IActionResult Excluir(int id)
         {
             try
@@ -184,5 +249,6 @@ namespace SistemaDeControleDeEstoque.Controllers
             }
         }
     }
+
 }
 

@@ -1,53 +1,220 @@
 ﻿@{
     ViewData["Title"] = "Início";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/css/HomeIndex.css" />
+}
+<div class="container mt-4">
 
-<div class="home-page">
+    <h1>Controle de Estoque</h1>
 
+    <p>
+        Resumo do estoque
+    </p>
 
-    <header class="navbar">
+    <hr />
 
-        <div class="logo">
-          
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Produtos</h5>
+                <h2>@ViewBag.TotalProdutos</h2>
+            </div>
         </div>
 
-    </header>
-
-
-    <main class="hero">
-
-        <div class="hero-content">
-
-            <p class="subtitle">
-                SISTEMA DE CONTROLE
-            </p>
-
-            <h1>
-                Controle de<br>
-                <span>Estoque</span>
-            </h1>
-
-            <p class="description">
-                Gerencie seus produtos, categorias e movimentações
-                de estoque de forma simples, rápida e organizada.
-            </p>
-
-            <a asp-controller="Produto"
-               asp-action="Index"
-               class="btn">
-                Acessar Produtos
-            </a>
-
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Estoque baixo</h5>
+                <h2>@ViewBag.EstoqueBaixo</h2>
+            </div>
         </div>
 
-
-
-        <div class="hero-decoration">
-
-            <div class="box"></div>
-
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Em falta</h5>
+                <h2>@ViewBag.ProdutosEmFalta</h2>
+            </div>
         </div>
 
-    </main>
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Valor do estoque</h5>
+                <h2>R$ @ViewBag.ValorEstoque.ToString("N2")</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+
+    <a asp-controller="Produto"
+       asp-action="Adicionar"
+       class="btn btn-primary">
+        Novo produto
+    </a>
+
+    <a asp-controller="Movimentacao"
+       asp-action="Index"
+       class="btn btn-secondary">
+        Fazer movimentação
+    </a>
+
+    <br />
+    <br />
+
+    <h3>Produtos com estoque baixo</h3>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Estoque</th>
+                <th>Quantidade mínima</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var produto in ViewBag.ProdutosEstoqueBaixo)
+            {
+                <tr>
+
+                    <td>
+                        @produto.Nome
+                    </td>
+
+                    <td>
+                        @produto.QuantidadeEmEstoque
+                    </td>
+
+                    <td>
+                        @produto.QuantidadeMinima
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <br />
+
+    <h3>Últimas entradas</h3>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var movimentacao in ViewBag.Entradas)
+            {
+                <tr>
+
+                    <td>
+                        @movimentacao.Produto
+                    </td>
+
+                    <td>
+                        @movimentacao.Quantidade
+                    </td>
+
+                    <td>
+                        @movimentacao.Data.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <br />
+
+    <h3>Últimas vendas</h3>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var movimentacao in ViewBag.Vendas)
+            {
+                <tr>
+
+                    <td>
+                        @movimentacao.Produto
+                    </td>
+
+                    <td>
+                        @movimentacao.Quantidade
+                    </td>
+
+                    <td>
+                        @movimentacao.Data.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <br />
+
+    <h3>Últimas perdas</h3>
+
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var movimentacao in ViewBag.Perda)
+            {
+                <tr>
+
+                    <td>
+                        @movimentacao.Produto
+                    </td>
+
+                    <td>
+                        @movimentacao.Quantidade
+                    </td>
+
+                    <td>
+                        @movimentacao.Data.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
 
 </div>

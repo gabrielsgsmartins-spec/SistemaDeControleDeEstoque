@@ -1,0 +1,139 @@
+﻿/* Fundo da página */
+body {
+    background-color: #f5f6f8;
+}
+
+/* Título principal */
+.container h1 {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Texto abaixo do título */
+.container > p {
+    color: #777;
+}
+
+/* Cards do resumo */
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+    /* Pequeno efeito ao passar o mouse */
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Títulos dos cards */
+    .card h5 {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    /* Números dos cards */
+    .card h2 {
+        color: #222;
+        font-weight: 600;
+        margin: 0;
+    }
+
+/* Botões */
+.btn {
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+/* Botão principal */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Botão secundário */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Títulos das tabelas */
+.container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Tabelas */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+    /* Cabeçalho das tabelas */
+    .table thead {
+        background-color: #e9ecef;
+    }
+
+        .table thead th {
+            font-weight: 600;
+            color: #444;
+            border-bottom: 1px solid #ddd;
+        }
+
+    /* Células */
+    .table td,
+    .table th {
+        padding: 12px;
+        vertical-align: middle;
+    }
+
+    /* Linhas */
+    .table tbody tr {
+        background-color: white;
+    }
+
+        /* Efeito nas linhas */
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+/* Linha horizontal */
+hr {
+    border-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Espaçamento entre os botões */
+a.btn {
+    margin-right: 5px;
+}
+
+/* Deixa as tabelas melhores em telas menores */
+@media (max-width: 768px) {
+
+    .col-md-3 {
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+        .table td,
+        .table th {
+            padding: 8px;
+        }
+}

@@ -37,6 +37,7 @@ namespace SistemaDeControleDeEstoque.Migrations
                     PrecoUnitario = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CategoriaId = table.Column<int>(type: "int", nullable: false)
+                    
                 },
                 constraints: table =>
                 {

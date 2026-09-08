@@ -16,7 +16,7 @@ namespace SistemaEstoque.Repositorio
         public List<ProdutoModel> ListarTodos()
         {
             return _bancoContext.Produtos
-                .Include(p => p.Categoria)   // já traz a categoria junto
+                .Include(p => p.Categoria)   
                 .ToList();
         }
 
