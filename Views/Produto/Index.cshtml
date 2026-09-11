@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Produtos";
 }
-
+@section Styles {
+    <link rel="stylesheet" href="~/css/ProdutoIndex.css" />
+}
 <div class="produtos-page">
 
     <div class="produtos-header">
@@ -29,15 +31,25 @@
 
     <div class="produtos-toolbar">
 
-        <div class="search-box">
+        <form asp-controller="Produto"
+              asp-action="BuscarProduto"
+              method="get"
+              class="search-box">
 
             <input type="text"
-                   id="pesquisaProduto"
+                   id="id"
+                   name="id"
                    placeholder="Pesquisar produto..." />
 
-        </div>
+            <button type="submit" class="btn-novo">
+                Buscar
+            </button>
+
+        </form>
 
     </div>
+
+
 
     <div class="table-container">
 

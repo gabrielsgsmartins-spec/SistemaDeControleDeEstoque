@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Excluir Produto";
 }
-
+@section Styles {
+    <link rel="stylesheet" href="~/css/ProdutoConfirmacao.css" />
+}
 <div class="confirmacao">
 
     <h1>Excluir Produto</h1>
@@ -30,6 +32,9 @@
            class="btn-cancelar">
             Cancelar
         </a>
+        <br />
+        <br />
+        <br />
 
         <form asp-controller="Produto"
               asp-action="Excluir"

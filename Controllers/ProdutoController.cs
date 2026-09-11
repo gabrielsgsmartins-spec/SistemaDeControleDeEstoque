@@ -2,14 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using SistemaEstoque.Data;
 using SistemaEstoque.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace SistemaDeControleDeEstoque.Controllers
 {
+    [Authorize]
     public class ProdutoController : Controller
     {
-
         private readonly EstoqueContext _bancoContext;
-
         public ProdutoController(EstoqueContext bancoContext)
         {
             _bancoContext = bancoContext;
@@ -68,17 +69,20 @@ namespace SistemaDeControleDeEstoque.Controllers
 
             return View("ApagarConfirmacao", produto);
         }
+        [HttpGet]
         public IActionResult BuscarProduto(int id)
         {
             var produto = _bancoContext.Produtos
-               .FirstOrDefault(p => p.Id == id);
+                .FirstOrDefault(p => p.Id == id);
+
             if (produto == null)
             {
                 return NotFound();
             }
 
-            return View(produto);
+            var produtos = new List<ProdutoModel> { produto };
 
+            return View("Index", produtos);
         }
 
 

@@ -1,15 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstoque.Data;
 using SistemaEstoque.Enums;
+using SistemaEstoque.Models;
 
 namespace SistemaDeControleDeEstoque.Controllers
 {
-    public class MovimentacaoController : Controller
+    public class MovimentacaoController : AdminController
     {
         private readonly EstoqueContext _bancoContext;
 
-        public MovimentacaoController(EstoqueContext bancoContext)
+        public MovimentacaoController(
+            EstoqueContext bancoContext,
+            UserManager<ApplicationUserModel> userManager) : base(userManager)
         {
             _bancoContext = bancoContext;
         }

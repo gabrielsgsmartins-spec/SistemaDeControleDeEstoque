@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SistemaEstoque.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SistemaDeControleDeEstoque.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly EstoqueContext _bancoContext;

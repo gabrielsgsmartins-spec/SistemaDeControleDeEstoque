@@ -1,0 +1,33 @@
+﻿@model List<SistemaEstoque.Models.ApplicationUserModel>
+
+<h1>Usuários</h1>
+
+<a asp-controller="Usuario"
+   asp-action="Adicionar"
+   class="btn btn-primary">
+    Adicionar Usuário
+</a>
+
+<br />
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.NomeCompleto</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.Tipo</td>
+            </tr>
+        }
+    </tbody>
+</table>

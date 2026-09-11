@@ -1,0 +1,97 @@
+﻿@model List<SistemaEstoque.Models.ApplicationUserModel>
+
+@{
+    ViewData["Title"] = "Usuários";
+}
+
+<div class="produto-form-page">
+
+    <div class="produto-form-header">
+
+        <div>
+            <h1>Usuários</h1>
+            <p>Gerencie os usuários do sistema.</p>
+        </div>
+
+        <a class="btn btn-primary"
+           asp-controller="Admin"
+           asp-action="Adicionar">
+            + Adicionar usuário
+        </a>
+
+    </div>
+
+
+    <div class="produto-form-card">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>E-mail</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var usuario in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @usuario.NomeCompleto
+                        </td>
+
+                        <td>
+                            @usuario.UserName
+                        </td>
+
+                        <td>
+                            @usuario.Email
+                        </td>
+
+                        <td>
+
+                            @if (usuario.Tipo == SistemaEstoque.Models.TipoUsuario.Admin)
+                            {
+                                <span>Administrador</span>
+                            }
+                            else
+                            {
+                                <span>Funcionário</span>
+                            }
+
+                        </td>
+
+                        <td>
+
+                            <a class="btn btn-warning btn-sm"
+                               asp-controller="Admin"
+                               asp-action="Editar"
+                               asp-route-id="@usuario.Id">
+                                Editar
+                            </a>
+
+                            <a class="btn btn-danger btn-sm"
+                               asp-controller="Admin"
+                               asp-action="Excluir"
+                               asp-route-id="@usuario.Id">
+                                Excluir
+                            </a>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

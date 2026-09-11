@@ -1,0 +1,75 @@
+﻿@model SistemaEstoque.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="produto-form-page">
+
+    <div class="produto-form-header">
+
+        <div>
+            <h1>Login</h1>
+            <p>Entre no sistema de controle de estoque.</p>
+        </div>
+
+    </div>
+
+    <div class="produto-form-card">
+
+        <form asp-controller="Login"
+              asp-action="Entrar"
+              method="post">
+
+            <div class="form-group">
+
+                <label asp-for="Usuario">
+                    Usuário
+                </label>
+
+                <input asp-for="Usuario"
+                       class="form-control"
+                       placeholder="Digite seu usuário" />
+
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="Senha">
+                    Senha
+                </label>
+
+                <input asp-for="Senha"
+                       type="password"
+                       class="form-control"
+                       placeholder="Digite sua senha" />
+
+            </div>
+
+            @if (ViewBag.Erro != null)
+            {
+                <p style="color:red">
+                    @ViewBag.Erro
+                </p>
+            }
+
+            <div class="form-actions">
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Entrar
+                </button>
+
+                <a class="btn btn-secondary"
+                   asp-controller="Login"
+                   asp-action="Cadastrar">
+                    Não sou usuário ainda
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
