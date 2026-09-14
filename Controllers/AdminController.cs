@@ -6,7 +6,6 @@ using SistemaEstoque.Models;
 
 namespace SistemaDeControleDeEstoque.Controllers
 {
-    [Authorize]
     public class AdminController : Controller
     {
         private readonly UserManager<ApplicationUserModel> _userManager;
@@ -78,44 +77,7 @@ namespace SistemaDeControleDeEstoque.Controllers
             return View(usuario);
         }
 
-        // Abre a tela de editar
-        [HttpGet]
-        public async Task<IActionResult> Editar(string id)
-        {
-            var usuario = await _userManager.FindByIdAsync(id);
-
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        // Salva a edição
-        [HttpPost]
-        public async Task<IActionResult> Editar(
-            ApplicationUserModel usuario)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(usuario);
-            }
-
-            var resultado = await _userManager.UpdateAsync(usuario);
-
-            if (resultado.Succeeded)
-            {
-                return RedirectToAction("Index");
-            }
-
-            foreach (var erro in resultado.Errors)
-            {
-                ModelState.AddModelError("", erro.Description);
-            }
-
-            return View(usuario);
-        }
+ 
 
         // Abre a confirmação de exclusão
         [HttpGet]
@@ -128,8 +90,9 @@ namespace SistemaDeControleDeEstoque.Controllers
                 return NotFound();
             }
 
-            return View(usuario);
+            return View("ExcluirUsuario",usuario);
         }
+
 
         // Exclui o usuário
         [HttpPost]

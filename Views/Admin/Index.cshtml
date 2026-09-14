@@ -69,17 +69,11 @@
 
                         <td>
 
-                            <a class="btn btn-warning btn-sm"
-                               asp-controller="Admin"
-                               asp-action="Editar"
-                               asp-route-id="@usuario.Id">
-                                Editar
-                            </a>
-
-                            <a class="btn btn-danger btn-sm"
-                               asp-controller="Admin"
+                            <a asp-controller="Admin"
                                asp-action="Excluir"
-                               asp-route-id="@usuario.Id">
+                               asp-route-id="@usuario.Id"
+                               class="btn-excluir"
+                               onclick="return confirm('Tem certeza que deseja excluir o usuario @usuario.NomeCompleto?');">
                                 Excluir
                             </a>
 

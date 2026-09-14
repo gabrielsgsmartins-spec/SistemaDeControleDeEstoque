@@ -416,3 +416,4 @@ C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\obj\Debug\net10.0\SistemaDe
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\obj\Debug\net10.0\ref\SistemaDeControleDeEstoque.dll
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\bin\Debug\net10.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\obj\Debug\net10.0\compressed\mzduh21tha-{0}-d7egivebe7-d7egivebe7.gz

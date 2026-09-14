@@ -65,6 +65,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\ApagarConfirmacao.css
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\css\HomeIndex.css
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\css\MovimentcaoIndex.css
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\css\ProdutoConfirmacao.css
@@ -131,3 +132,4 @@ C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\lib\jquery\dist\jqu
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\gmartins\Desktop\SistemaDeControleDeEstoque\wwwroot\css\ApagarConfirmacao.css

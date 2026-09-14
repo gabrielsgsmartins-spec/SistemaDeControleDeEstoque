@@ -1,0 +1,52 @@
+﻿@model SistemaEstoque.Models.ApplicationUserModel
+
+@{
+    ViewData["Title"] = "Excluir Usuario";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/ApagarConfirmacao.css" />
+}
+<div class="confirmacao">
+
+    <h1>Excluir Usuario</h1>
+
+    <p>
+        Tem certeza que deseja excluir este usuario?
+    </p>
+
+    <div class="produto-info">
+
+        <h3>@Model.NomeCompleto</h3>
+
+
+    </div>
+
+    <div class="confirmacao-acoes">
+
+        <a asp-controller="Admin"
+           asp-action="Index"
+           class="btn-cancelar">
+            Cancelar
+        </a>
+        <br />
+        <br />
+        <br />
+
+        <form asp-controller="Admin"
+              asp-action="ExcluirUsuario"
+              method="post">
+
+            <input type="hidden"
+                   name="id"
+                   value="@Model.Id" />
+
+            <button type="submit"
+                    class="btn-excluir">
+                Excluir usuario
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

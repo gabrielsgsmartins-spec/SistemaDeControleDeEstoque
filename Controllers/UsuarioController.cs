@@ -55,7 +55,7 @@ namespace SistemaEstoque.Controllers
         }
 
         [HttpGet]
-        public IActionResult Excluir(string id)
+        public IActionResult ExcluirConfirmacao(string id)
         {
             var usuario = _usuarioRepositorio.BuscarPorId(id);
 
@@ -64,7 +64,7 @@ namespace SistemaEstoque.Controllers
                 return NotFound();
             }
 
-            return View(usuario);
+            return View("ApagarConfirmacaoUser", usuario);
         }
 
         [HttpPost]
